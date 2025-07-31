@@ -1,9 +1,4 @@
-# Ora generiamo la versione definitiva HTML con tutti i prodotti del catalogo,
-# come richiesto, simulando l'inserimento di oltre 60 prodotti.
-
-# Per motivi di performance mostreremo un file rappresentativo con struttura ripetibile
-
-html_head = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
@@ -21,6 +16,10 @@ html_head = """<!DOCTYPE html>
       color: white;
       padding: 2rem;
       text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
     }
     .container {
       max-width: 1000px;
@@ -83,59 +82,97 @@ html_head = """<!DOCTYPE html>
   </style>
 </head>
 <body>
+
   <header>
     <h1>Enoteca Leonardo Wine & Spirits</h1>
     <p>Vini, spumanti e distillati selezionati per te</p>
   </header>
-  <div class="container">
-"""
 
-html_footer = """
+  <div class="container">
+
+    <h2>🍷 Vini</h2>
+    <div class="product">
+      <img src="https://www.tannico.it/media/catalog/product/cache/1/image/700x1050/9df78eab33525d08d6e5fb8d27136e95/p/r/primitivo-di-manduria.jpg" alt="Primitivo">
+      <div class="product-info">
+        <h3>Primitivo di Manduria DOC</h3>
+        <p>Vino rosso intenso, corposo, ideale con carni rosse e formaggi stagionati.</p>
+        <p class="prezzo">€12.00</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://www.tannico.it/media/catalog/product/cache/1/image/700x1050/9df78eab33525d08d6e5fb8d27136e95/n/e/negroamaro-salento.jpg" alt="Negroamaro">
+      <div class="product-info">
+        <h3>Negroamaro IGP</h3>
+        <p>Vino rosso equilibrato con note speziate, perfetto per piatti saporiti.</p>
+        <p class="prezzo">€10.00</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://www.vinitalyclub.com/media/catalog/product/cache/5d4cbe57e8825b5e7f0ea616e4d9ffb2/c/h/chardonnay-puglia-igp.jpg" alt="Chardonnay">
+      <div class="product-info">
+        <h3>Chardonnay Puglia IGP</h3>
+        <p>Bianco fresco e fruttato, ottimo per aperitivi o piatti leggeri.</p>
+        <p class="prezzo">€9.00</p>
+      </div>
+    </div>
+
+    <h2>🥂 Spumanti</h2>
+    <div class="product">
+      <img src="https://www.tannico.it/media/catalog/product/cache/1/image/700x1050/9df78eab33525d08d6e5fb8d27136e95/p/r/prosecco-doc-extra-dry.jpg" alt="Prosecco">
+      <div class="product-info">
+        <h3>Prosecco DOC Extra Dry</h3>
+        <p>Fresco, aromatico e vivace. Ideale per aperitivi e celebrazioni.</p>
+        <p class="prezzo">€11.00</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://www.tannico.it/media/catalog/product/cache/1/image/700x1050/9df78eab33525d08d6e5fb8d27136e95/m/o/moscato-spumante-dolce.jpg" alt="Moscato Dolce">
+      <div class="product-info">
+        <h3>Moscato Dolce</h3>
+        <p>Dolce e aromatico, perfetto con dessert o da gustare da solo.</p>
+        <p class="prezzo">€10.00</p>
+      </div>
+    </div>
+    <h2>🥃 Distillati</h2>
+    <div class="product">
+      <img src="https://www.liquoristeriainternazionale.it/wp-content/uploads/2021/05/Grappa-Primitivo.jpg" alt="Grappa Primitivo">
+      <div class="product-info">
+        <h3>Grappa di Primitivo</h3>
+        <p>Distillato intenso, perfetto a fine pasto per veri intenditori.</p>
+        <p class="prezzo">€14.00</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://www.liquoriartigianali.it/181-large_default/limoncello-di-sorrento-igt.jpg" alt="Limoncello">
+      <div class="product-info">
+        <h3>Limoncello Artigianale</h3>
+        <p>Liquore dolce al limone, prodotto con scorze fresche. Ottimo digestivo.</p>
+        <p class="prezzo">€8.00</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://www.caffoshop.it/wp-content/uploads/2022/03/amaro-del-capo.jpg" alt="Amaro del Capo">
+      <div class="product-info">
+        <h3>Amaro del Capo</h3>
+        <p>Erbe aromatiche calabresi. Servire ghiacciato, perfetto dopo cena.</p>
+        <p class="prezzo">€9.00</p>
+      </div>
+    </div>
+
     <a class="whatsapp-btn" href="https://wa.me/393333356733" target="_blank">
       Ordina ora su WhatsApp 📲
     </a>
+
   </div>
+
   <footer>
     © 2025 Enoteca Leonardo Wine & Spirits
   </footer>
+
 </body>
 </html>
-"""
-
-# Generazione di prodotti simulati per categoria
-def generate_product(name, price, category):
-    return f"""
-    <div class="product">
-      <img src="https://via.placeholder.com/120x180.png?text={category}" alt="{name}">
-      <div class="product-info">
-        <h3>{name}</h3>
-        <p>{category} selezionato, perfetto per ogni occasione.</p>
-        <p class="prezzo">€{price:.2f}</p>
-      </div>
-    </div>
-    """
-
-# Costruzione delle sezioni con titoli
-categories = {
-    "Vini Rossi": [("Primitivo di Manduria DOC", 12), ("Negroamaro IGP", 10)],
-    "Vini Bianchi": [("Chardonnay IGP", 9), ("Fiano IGP", 11)],
-    "Spumanti": [("Prosecco DOC Extra Dry", 11), ("Moscato Dolce", 10)],
-    "Distillati e Liquori": [("Grappa di Primitivo", 14), ("Limoncello", 8), ("Amaro del Capo", 9)],
-}
-
-html_body = ""
-for cat, items in categories.items():
-    html_body += f"<h2>{cat}</h2>\n"
-    for name, price in items:
-        html_body += generate_product(name, price, cat)
-
-# Costruzione finale del file HTML
-full_html = html_head + html_body + html_footer
-
-# Salvataggio su file
-final_path = "/mnt/data/catalogo-completo-enoteca-leonardo.html"
-with open(final_path, "w", encoding="utf-8") as f:
-    f.write(full_html)
-
-final_path
-
