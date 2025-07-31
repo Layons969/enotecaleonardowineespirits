@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enoteca Leonardo Wine & Spirits</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #ffe6e6);
+      color: #333;
+    }
+
+    header {
+      background-color: #7a003c;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .vino {
+      background-color: #fff;
+      border-left: 5px solid #ff4d4d;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .vino h2 {
+      margin: 0;
+      color: #7a003c;
+    }
+
+    .vino p {
+      margin: 0.5rem 0;
+    }
+
+    .prezzo {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 12px 24px;
+      background-color: #25d366;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebc59;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Enoteca Leonardo Wine & Spirits</h1>
+  <p>I tuoi vini di fiducia, a portata di clic</p>
+</header>
+
+<div class="container">
+
+  <div class="vino">
+    <h2>Massaro Rosso</h2>
+    <p>Vino corposo e intenso, perfetto per carni rosse e formaggi stagionati.</p>
+    <p class="prezzo">€12</p>
+  </div>
+
+  <div class="vino">
+    <h2>Bianco Leonardo</h2>
+    <p>Fresco e fruttato, ideale con pesce e aperitivi.</p>
+    <p class="prezzo">€10</p>
+  </div>
+
+  <div class="vino">
+    <h2>WineEspirit Selezione</h2>
+    <p>Un blend elegante e strutturato, per veri intenditori.</p>
+    <p class="prezzo">€15</p>
+  </div>
+
+  <a class="whatsapp-btn" href="https://wa.me/393333356733" target="_blank">
+    Ordina ora su WhatsApp 📲
+  </a>
+
+</div>
+
+<footer>
+  © 2025 Enoteca Leonardo - Tutti i diritti riservati
+</footer>
+
+</body>
+</html>
