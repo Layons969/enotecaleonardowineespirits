@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #f8f9fa, #ffe6e6);
+      background: #fdf6f6;
       color: #333;
     }
 
@@ -25,96 +25,169 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
       padding: 2rem;
     }
 
-    .vino {
-      background-color: #fff;
-      border-left: 5px solid #ff4d4d;
-      margin-bottom: 1.5rem;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    section {
+      margin-bottom: 3rem;
     }
 
-    .vino h2 {
-      margin: 0;
+    h2 {
+      border-left: 8px solid #7a003c;
+      padding-left: 10px;
       color: #7a003c;
+      margin-top: 2rem;
     }
 
-    .vino p {
-      margin: 0.5rem 0;
+    .item {
+      background-color: #fff;
+      border-left: 4px solid #ff4d4d;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .item h3 {
+      margin: 0 0 5px;
+      color: #222;
+    }
+
+    .item p {
+      margin: 4px 0;
     }
 
     .prezzo {
       font-weight: bold;
-      color: #333;
+      color: #111;
     }
 
     .whatsapp-btn {
-      display: inline-block;
-      margin-top: 2rem;
+      display: block;
+      width: fit-content;
+      margin: 2rem auto;
       padding: 12px 24px;
       background-color: #25d366;
       color: white;
       font-weight: bold;
-      border: none;
-      border-radius: 5px;
       text-decoration: none;
+      border-radius: 6px;
       font-size: 1.1rem;
-      transition: background 0.3s;
-    }
-
-    .whatsapp-btn:hover {
-      background-color: #1ebc59;
     }
 
     footer {
-      text-align: center;
+      background-color: #f0f0f0;
       padding: 1rem;
+      text-align: center;
       font-size: 0.9rem;
-      color: #666;
+      color: #777;
+    }
+
+    .about, .contact {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Enoteca Leonardo Wine & Spirits</h1>
-  <p>I tuoi vini di fiducia, a portata di clic</p>
-</header>
+  <header>
+    <h1>Enoteca Leonardo Wine & Spirits</h1>
+    <p>I migliori vini e distillati per ogni occasione</p>
+  </header>
 
-<div class="container">
+  <div class="container">
 
-  <div class="vino">
-    <h2>Massaro Rosso</h2>
-    <p>Vino corposo e intenso, perfetto per carni rosse e formaggi stagionati.</p>
-    <p class="prezzo">€12</p>
+    <section>
+      <h2>🍷 Vini</h2>
+
+      <div class="item">
+        <h3>Primitivo di Manduria DOC</h3>
+        <p>Vino rosso intenso e corposo, tipico pugliese.</p>
+        <p class="prezzo">€12</p>
+      </div>
+
+      <div class="item">
+        <h3>Negroamaro IGP</h3>
+        <p>Vino rosso equilibrato, dal retrogusto speziato.</p>
+        <p class="prezzo">€10</p>
+      </div>
+
+      <div class="item">
+        <h3>Chardonnay Puglia IGP</h3>
+        <p>Bianco fresco e fruttato, ottimo per aperitivi.</p>
+        <p class="prezzo">€9</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🥂 Spumanti & Frizzanti</h2>
+
+      <div class="item">
+        <h3>Prosecco DOC Extra Dry</h3>
+        <p>Spumante elegante e aromatico, ideale per brindisi.</p>
+        <p class="prezzo">€11</p>
+      </div>
+
+      <div class="item">
+        <h3>Moscato Dolce</h3>
+        <p>Vino dolce e profumato, perfetto con dessert.</p>
+        <p class="prezzo">€10</p>
+      </div>
+
+      <div class="item">
+        <h3>Rosé Extra Dry</h3>
+        <p>Spumante rosato fresco, piacevole e vivace.</p>
+        <p class="prezzo">€11</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🥃 Distillati & Liquori</h2>
+
+      <div class="item">
+        <h3>Grappa di Primitivo</h3>
+        <p>Distillato intenso dal gusto deciso e avvolgente.</p>
+        <p class="prezzo">€14</p>
+      </div>
+
+      <div class="item">
+        <h3>Limoncello Artigianale</h3>
+        <p>Liquore dolce al limone, prodotto con scorze fresche.</p>
+        <p class="prezzo">€8</p>
+      </div>
+
+      <div class="item">
+        <h3>Amaro del Capo</h3>
+        <p>Erbe aromatiche calabresi, digestivo naturale.</p>
+        <p class="prezzo">€9</p>
+      </div>
+    </section>
+
+    <a class="whatsapp-btn" href="https://wa.me/393333356733" target="_blank">
+      Ordina ora su WhatsApp 📲
+    </a>
+
+    <section class="about">
+      <h2>Chi siamo</h2>
+      <p>Siamo un'enoteca a conduzione familiare con una selezione curata di vini, spumanti e distillati. La nostra missione è offrire qualità e passione in ogni bottiglia, con un servizio diretto e professionale.</p>
+    </section>
+
+    <section class="contact">
+      <h2>Contatti</h2>
+      <p>📞 WhatsApp: <a href="https://wa.me/393333356733">+39 333 335 6733</a></p>
+      <p>📧 Email: <a href="mailto:info@enotecaleonardo.it">info@enotecaleonardo.it</a></p>
+    </section>
+
   </div>
 
-  <div class="vino">
-    <h2>Bianco Leonardo</h2>
-    <p>Fresco e fruttato, ideale con pesce e aperitivi.</p>
-    <p class="prezzo">€10</p>
-  </div>
-
-  <div class="vino">
-    <h2>WineEspirit Selezione</h2>
-    <p>Un blend elegante e strutturato, per veri intenditori.</p>
-    <p class="prezzo">€15</p>
-  </div>
-
-  <a class="whatsapp-btn" href="https://wa.me/393333356733" target="_blank">
-    Ordina ora su WhatsApp 📲
-  </a>
-
-</div>
-
-<footer>
-  © 2025 Enoteca Leonardo - Tutti i diritti riservati
-</footer>
+  <footer>
+    © 2025 Enoteca Leonardo Wine & Spirits
+  </footer>
 
 </body>
 </html>
